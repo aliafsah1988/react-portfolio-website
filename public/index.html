@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="description" content="This is ali afsahnoudeh's portfolio website">
+    <meta name="keywords" content="portfolio, ali, aliafsahnoudeh, afsah, afsahnoudeh, front-end">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Ali Afsahnoudeh</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollit@1.0.5/scrollIt.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      $(function() {
+  var t = $(window);
+  $.scrollIt({
+    upKey: 38,
+    downKey: 40,
+    easing: "swing",
+    scrollTime: 600,
+    activeClass: "active",
+    onPageChange: null,
+    topOffset: -80
+  }),
+    $(".navbar-nav .nav-link").on("click", function() {
+      $(".navbar-collapse.show").removeClass("show");
+    }),
+    t.on("scroll", function() {
+      var o = t.scrollTop(),
+        a = $(".navbar"),
+        e = $(".navbar .logo> img");
+      o > 100
+        ? (a.addClass("nav-scroll"), e.attr("src", "img/logo-dark.png"))
+        : (a.removeClass("nav-scroll"), e.attr("src", "img/logo-light.png"));
+    }),
+    t.on("scroll", function() {
+      var t = $(".button-top");
+      $(this).scrollTop() >= 700 ? t.show() : t.hide();
+    }),
+    t.on("scroll", function() {
+      $(".skill-progress span").each(function() {
+        var t = $(this).offset().top + $(this).outerHeight(),
+          o = $(window).scrollTop() + $(window).height(),
+          a = $(this).attr("data-value");
+        o > t && $(this).css({ width: a });
+      });
+    }),
+    $(".counter .number").counterUp({ delay: 10, time: 1500 }),
+    $(".portfolio .gallery").magnificPopup({
+      delegate: ".popup-img",
+      type: "image",
+      gallery: { enabled: !0 }
+    });
+}),
+  $(window).on("load", function() {
+    $(".loading").fadeOut(500);
+    var t = $(".gallery").isotope({ itemSelector: ".item" });
+    $(".filtering").on("click", "span", function() {
+      var o = $(this).attr("data-filter");
+      t.isotope({ filter: o });
+    }),
+      $(".filtering").on("click", "span", function() {
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+      })
+  });
+
+    </script>
+  </body>
+</html>
