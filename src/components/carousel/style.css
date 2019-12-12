@@ -1,0 +1,10 @@
+.carousel-image {
+    height: 100px;
+    margin: auto;
+}
+
+.carousel-title {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,81 @@
+.header {
+	background-image: url(../../assets/img/banner-background.jpg);
+	overflow: hidden;
+	height: 100vh
+}
+
+.header .v-middle {
+	overflow: hidden;
+	z-index: 9
+}
+
+.header .caption {
+	margin-top: 50px
+}
+
+.header .caption img {
+	width: 150px;
+	height: 150px;
+	background: 0 0;
+	margin-bottom: 20px
+}
+
+.header .caption h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 10px
+}
+
+.header .caption h2 {
+	color: #eee;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 20px
+}
+
+.header .caption h2 b {
+	font-weight: 500
+}
+
+.header .caption .social-media span {
+	color: #eee;
+	background: rgba(117, 117, 117, .1);
+	font-size: 13px;
+	height: 30px;
+	width: 30px;
+	line-height: 31px;
+	border: 1px solid rgba(117, 117, 117, .2);
+	border-radius: 5px;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.header .caption .social-media span:hover {
+	color: #fff;
+	background: #7cb342
+}
+
+.header .rounded-image {
+	border-radius: 10% !important;
+}
+
+@media only screen and (min-width:768px) {
+	.rounded-image {
+		float: none;
+	}
+}
+
+@media only screen and (min-width:1170px) {
+	.rounded-image {
+		float: right;
+	}
+}
+
+@media (max-width:991.98px) {
+	.rounded-image {
+		float: none;
+	}
+}

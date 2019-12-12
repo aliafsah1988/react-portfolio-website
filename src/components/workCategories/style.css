@@ -1,0 +1,26 @@
+.workCategories {
+	background: #f5f5f5;
+	overflow: hidden
+}
+
+.workCategories .item {
+	background: #fff;
+	padding: 30px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	-webkit-transition: all .5s;
+	transition: all .5s
+}
+
+.workCategories .item:hover {
+	-webkit-box-shadow: 0 12px 20px rgba(0, 0, 0, .15);
+	box-shadow: 0 12px 20px rgba(0, 0, 0, .15)
+}
+
+.workCategories .item .icon {
+	color: #7cb342;
+	font-size: 30px;
+	margin-bottom: 15px;
+	-webkit-transition: all .5s;
+	transition: all .5s
+}
