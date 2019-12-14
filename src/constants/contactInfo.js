@@ -1,4 +1,4 @@
 export default {
-    phone: '+98 9374055403',
-    email: 'ali.afsah1988@gmail.com'
-}
+  phone: "+12 3456789",
+  email: "info@example.com"
+};
