@@ -5,7 +5,7 @@ import { Redirect } from "react-router";
 import GalleryItem from "../../components/galleryItem";
 import projects from "../../constants/projects";
 
-const ProjectsGallery = props => {
+const ProjectsGallery = () => {
   const [projectId, setProjectId] = useState(false);
   const [redirect, setRedirect] = useState(false);
 

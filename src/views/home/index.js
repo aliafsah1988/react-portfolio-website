@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Header from "../../components/header";
 import About from "../../components/about";
 import Carousel from "../../components/carousel";
@@ -9,14 +8,9 @@ import Portfolio from "../../components/portfolio";
 
 class Home extends Component {
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.scrollTo(0, 0);
   }
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-  handleScroll(someEvent) {
-    console.log(`handleScroll`);
-  }
+
   render() {
     return (
       <div>

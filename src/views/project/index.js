@@ -2,9 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projects from "../../constants/projects";
 import GalleryItem from "../../components/galleryItem";
-import NavbarSmall from "../../components/navbarSmall";
+import Navbar from "../../components/navbar";
 
 const Project = () => {
+  window.scrollTo(0, 0);
   let { id } = useParams();
   const index = projects.findIndex(project => {
     return project.id === id;
@@ -23,7 +24,7 @@ const Project = () => {
 
   return (
     <React.Fragment>
-      <NavbarSmall />
+      <Navbar />
       <section
         className="portfolio section-padding text-center"
         data-scroll-index="3"

@@ -1,8 +1,9 @@
 import React from "react";
+import osDetect from '../../utils/osDetect';
 
 const GalleryItem = props => {
   return (
-    <div className={props.item.upperClassNames}>
+    <div className={props.item.upperClassNames} onClick={ osDetect.isMobile() ? props.clicked : null}>
       <div className={props.item.classNames} data-wow-offset="200">
         {/* eslint-disable-next-line */}
         <img src={props.item.imageName} alt="Image" />

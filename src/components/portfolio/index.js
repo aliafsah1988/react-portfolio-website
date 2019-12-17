@@ -14,7 +14,7 @@ const Portfolio = () => {
           <h3>Portfolio</h3>
           <div className="row">
             <div className="col-lg-6 col-md-8 mx-auto">
-              <p>This a list of some my projects.</p>
+              <p>A list of some projects that I participanted in them.</p>
             </div>
           </div>
         </div>
